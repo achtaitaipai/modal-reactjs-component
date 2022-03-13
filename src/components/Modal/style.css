@@ -1,7 +1,7 @@
 .modal {
 	position: fixed;
 	inset: 0;
-	background: rgba(136, 136, 136, 0.459);
+	background: rgba(136, 136, 136, 0.7);
 	display: grid;
 	place-items: center;
 	z-index: 1000;
