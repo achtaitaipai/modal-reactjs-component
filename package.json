@@ -2,15 +2,25 @@
 	"name": "@achtaitaipai/modal-reactjs-component",
 	"version": "1.0.0",
 	"description": "simple modal component library",
+	"keywords": [
+		"react",
+		"components",
+		"ui",
+		"modal"
+	],
 	"main": "dist/index.js",
 	"module": "dist/index.es.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/achtaitaipai/modal-reactjs-component"
+	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
 		"build-lib": "rollup -c "
 	},
-	"author": "Charles Cailleteau",
+	"author": "achtaitaipai",
 	"license": "MIT",
 	"devDependencies": {
 		"@babel/core": "^7.17.5",
