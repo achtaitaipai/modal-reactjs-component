@@ -1,7 +1,7 @@
 .modal {
 	position: fixed;
 	inset: 0;
-	background: rgba(136, 136, 136, 0.7);
+	background: rgba(88, 83, 83, 0.878);
 	display: grid;
 	place-items: center;
 	z-index: 1000;
@@ -29,6 +29,7 @@
 	box-sizing: border-box;
 }
 .modal__header h2 {
+	font-size: 1.3rem;
 	margin: 0 1rem 0 0;
 }
 

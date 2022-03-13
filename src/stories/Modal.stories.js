@@ -11,7 +11,7 @@ stories.add('App', () => {
 		<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'start', justifyContent: 'center', gap: '1.5rem', padding: '5rem' }}>
 			<button onClick={() => modalRef.current.open()}>ouvrir</button>
 
-			<Modal ref={modalRef} title="titre" message={'message'} onClose={() => console.log('oe')} />
+			<Modal ref={modalRef} title="titre" message={'message'} onClose={() => console.log('close')} onConfirm={() => console.log('confirm')} />
 		</div>
 	)
 })

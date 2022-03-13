@@ -16,7 +16,7 @@
             <div>
                 <button onClick={() => modalRef.current.open()}>ouvrir</button>
 
-                <Modal ref={modalRef} title="titre" message={'message'} onClose={() => console.log('oe')} />
+                <Modal ref={modalRef} title="titre" message={'message'} onClose={() => console.log('close')} onConfirm={() => console.log('confirm')} />
             </div>
         )
     }
@@ -25,8 +25,9 @@
 
 #### Props
 
-| Name    | Type       |
-| ------- | ---------- |
-| title   | 'String'   |
-| message | 'String'   |
-| onClose | 'Function' |
+| Name      | Type       | Description                                          |
+| --------- | ---------- | ---------------------------------------------------- |
+| title     | 'String'   | Modal's title                                        |
+| message   | 'String'   | Modal's message                                      |
+| onClose   | 'Function' | Function to execute when the user closes the modal   |
+| onConfirm | 'Function' | Function to execute when the user confirms the modal |
