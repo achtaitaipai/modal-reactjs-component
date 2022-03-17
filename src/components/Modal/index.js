@@ -1,7 +1,7 @@
 import React, { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react'
 import './style.css'
 
-export const Modal = forwardRef(({ title, message, onClose, onConfirm }, ref) => {
+export const Modal = forwardRef(({ title, onClose, onConfirm, children, confirmBtn }, ref) => {
 	const [isOpen, setIsOpen] = useState(false)
 	const dialogRef = useRef()
 	const closeBtnRef = useRef()
@@ -70,11 +70,13 @@ export const Modal = forwardRef(({ title, message, onClose, onConfirm }, ref) =>
 						</svg>
 					</button>
 				</header>
-				<p id="dialogDesc">{message}</p>
+				<div className="modal__desc">{children}</div>
 
-				<button type="button" onClick={() => close(true)} onKeyDown={handleKeyLast} ref={confirmBtnRef}>
-					Ok
-				</button>
+				{confirmBtn && (
+					<button type="button" onClick={() => close(true)} onKeyDown={handleKeyLast} ref={confirmBtnRef}>
+						{confirmBtn}
+					</button>
+				)}
 			</div>
 		</div>
 	)

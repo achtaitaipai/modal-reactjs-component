@@ -6,28 +6,32 @@
 
 ### Usage
 
-    import { useRef } from 'react'
-    import Modal from './lib/components/Modal'
-    import './App.css'
+```jsx
+import { useRef } from 'react'
+import Modal from './lib/components/Modal'
+import './App.css'
 
-    function App() {
-        const modalRef = useRef()
-        return (
-            <div>
-                <button onClick={() => modalRef.current.open()}>ouvrir</button>
+function App() {
+	const modalRef = useRef()
+	return (
+		<div>
+			<button onClick={() => modalRef.current.open()}>ouvrir</button>
 
-                <Modal ref={modalRef} title="titre" message={'message'} onClose={() => console.log('close')} onConfirm={() => console.log('confirm')} />
-            </div>
-        )
-    }
+			<Modal ref={modalRef} title="titre" message={'message'} onClose={() => console.log('close')} onConfirm={() => console.log('confirm')} confirmBtn={'Ok'}>
+				<p>Content of the modal</p>
+			</Modal>
+		</div>
+	)
+}
 
-    export default App
+export default App
+```
 
 #### Props
 
-| Name      | Type       | Description                                          |
-| --------- | ---------- | ---------------------------------------------------- |
-| title     | 'String'   | Modal's title                                        |
-| message   | 'String'   | Modal's message                                      |
-| onClose   | 'Function' | Function to execute when the user closes the modal   |
-| onConfirm | 'Function' | Function to execute when the user confirms the modal |
+| Name       | Type       | Description                                          |
+| ---------- | ---------- | ---------------------------------------------------- |
+| title      | 'String'   | Modal's title                                        |
+| confirmBtn | 'String'   | Confirm button's content                             |
+| onClose    | 'Function' | Function to execute when the user closes the modal   |
+| onConfirm  | 'Function' | Function to execute when the user confirms the modal |
