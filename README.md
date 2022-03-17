@@ -8,8 +8,7 @@
 
 ```jsx
 import { useRef } from 'react'
-import Modal from './lib/components/Modal'
-import './App.css'
+import Modal from 'Modal'
 
 function App() {
 	const modalRef = useRef()
