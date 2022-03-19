@@ -2,7 +2,8 @@
 
 ### Install
 
-    npm install modal-reactjs-component
+    npm install @achtaitaipai/modal-reactjs-component
+    yarn add @achtaitaipai/modal-reactjs-component
 
 ### Usage
 
